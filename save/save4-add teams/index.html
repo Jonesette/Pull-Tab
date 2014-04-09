@@ -1,0 +1,90 @@
+<html manifest="manifest.php">
+    <head>
+        <title>PullTab</title>
+        <link type="text/css" rel="stylesheet" media="screen" href="jqtouch/jqtouch.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="themes/jqt/theme.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="pulltab.css">
+        <script type="text/javascript" src="jqtouch/jquery.js"></script>
+        <script type="text/javascript" src="jqtouch/jqtouch.js"></script>
+        <script type="text/javascript" src="pulltab.js"></script>
+    </head>
+    
+    <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>PullTab</h1>
+                <a class="button flip" href="#settings">Settings</a>
+            </div>
+            <ul class="edgetoedge">
+                <li class="arrow"><a href="#dates">Scores by Sports</a></li>
+                <li class="arrow"><a href="#about">About</a></li>
+            </ul>
+        </div>
+        <div id="about">
+            <div class="toolbar">
+                <h1>About</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            <div>
+                <p>Pull Tab Tracker gives you one place to track all your pull tabs and board scores for you sports bets.</p>
+            </div>
+        </div>
+        <div id="dates">
+            <div class="toolbar">
+                <h1>Sports</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            <ul class="edgetoedge">
+                <li class="arrow"><a id="0" href="#date">Football</a></li>
+                <li class="arrow"><a id="1" href="#date">Baseball</a></li>
+                <li class="arrow"><a id="2" href="#date">Basketball</a></li>
+                <li class="arrow"><a id="3" href="#date">Soccer</a></li>
+                <li class="arrow"><a id="4" href="#date">Hockey</a></li>
+            </ul>
+        </div>
+        <div id="date">
+            <div class="toolbar">
+                <h1>Date</h1>
+                <a class="button back" href="#">Back</a>
+                <a class="button slideup" href="#createEntry">+</a>
+            </div>
+            <ul class="edgetoedge">
+                <li id="entryTemplate" class="entry" style="display:none">
+                    <span class="label">Label</span>
+                    <span class="team1">Label</span>
+                    <span class="score2">000</span>
+                    <span class="team2">Label</span>
+                    <span class="delete">Delete</span>
+                </li>
+            </ul>
+        </div>
+        <div id="createEntry">
+            <div class="toolbar">
+                <h1>New Entry</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li><input type="text" placeholder="Team1" name="team1" id="team1" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><input type="text" placeholder="Team2" name="team2" id="team2" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><input type="text" placeholder="Score1" name="score1" id="score1" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><input type="text" placeholder="Score2" name="score2" id="score2" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><input type="submit" class="submit" name="action" value="Save Entry" /></li>
+                </ul>
+            </form>
+        </div>
+        <div id="settings">
+            <div class="toolbar">
+                <h1>Settings</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li><input placeholder="FirstName" type="text" name="firstname" id="firstname" /></li>
+                    <li><input placeholder="LastName" type="text" name="lastname" id="lastname" /></li>
+                    <li><input type="submit" class="submit" name="action" value="Save Changes" /></li>
+                </ul>
+            </form>
+        </div>
+    </body>
+</html>
